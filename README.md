@@ -20,7 +20,7 @@ Este es un sistema de consola desarrollado en C# que permite la **gestion basica
 
 
 
-### 🔧 Pasos para ejecutar el sistema
+### Pasos para ejecutar el sistema
 
 
 
