@@ -30,8 +30,6 @@ Este es un sistema de consola desarrollado en C# que permite la **gestion basica
 
 3. Y se presentara el siguiente menu:
 
-"C:\Projects\tecsup\class11\documents\img\menu.png"
-
 ![Menu](documents/img/menu.png)
 
 
