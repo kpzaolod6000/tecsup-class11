@@ -1,38 +1,38 @@
-\# Sistema de Citas Medicas en C#
+# Sistema de Citas Medicas en C#
 
 
 
-\## Descripción
+## Descripción
 
-Este es un sistema de consola desarrollado en C# que permite la \*\*gestion basica medico\*\*, incluyendo \*\*pacientes\*\*, \*\*doctores\*\* y \*\*enfermeros\*\*. Se utilizo \*\*Programacion Orientada a Objetos (POO)\*\* como herencia, encapsulamiento y polimorfismo para modelar entidades del sistema de salud.
-
-
-
-\## Manual de Usuario
+Este es un sistema de consola desarrollado en C# que permite la **gestion basica medico**, incluyendo **pacientes**, **doctores** y **enfermeros**. Se utilizo **Programacion Orientada a Objetos (POO)** como herencia, encapsulamiento y polimorfismo para modelar entidades del sistema de salud.
 
 
 
-\### Requisitos
+## Manual de Usuario
 
 
 
-\- Tener instalado \*\*Visual Studio\*\* o \*\*.NET SDK\*\*
+### Requisitos
 
 
 
-\### 🔧 Pasos para ejecutar el sistema
+- Tener instalado **Visual Studio** o **.NET SDK**
 
 
 
-1\. Abre el archivo `Program.cs` en Visual Studio.
-
-2\. Ejecuta el proyecto.
-
-3\. Y se presentara el siguiente menu:
+### 🔧 Pasos para ejecutar el sistema
 
 
 
-\### Funcionalidades disponibles:
+1. Abre el archivo `Program.cs` en Visual Studio.
+
+2. Ejecuta el proyecto.
+
+3. Y se presentara el siguiente menu:
+
+
+
+### Funcionalidades disponibles:
 
 1. Registrar un nuevo paciente con nombre, DNI, seguro, telefono, email y direccion
 2. Registrar un nuevo doctor con nombre, DNI, especialidad, telefono, email y direccion
