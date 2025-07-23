@@ -9,6 +9,9 @@
 
     public class Program
     {
+        /// <summary>
+        /// Clase Usuario que representa a un usuario del sistema de citas médicas.
+        /// </summary>
         public class Usuario
         {
             protected string Nombre { get; set; }
@@ -18,6 +21,14 @@
             public string direccion { get; set; }
             //public string FechaNacimiento { get; set; }
 
+            /// <summary>
+            /// Constructor de la clase Usuario.
+            /// </summary>
+            /// <param name="nombre">Nombre del usuario.</param>
+            /// <param name="dni">DNI del usuario.</param>
+            /// <param name="_telefono">Teléfono del usuario.</param>
+            /// <param name="_email">Correo electrónico.</param>
+            /// <param name="_direccion">Dirección del usuario.</param>
             public Usuario(string nombre, string dni, int _telefono, string _email, string _direccion)
             {
                 Nombre = nombre;
@@ -27,6 +38,10 @@
                 direccion = _direccion;
                 Console.WriteLine("Usuario creado");
             }
+
+            /// <summary>
+            /// Imprime la información básica del usuario.
+            /// </summary>
             public virtual void print()
             {
                 //Console.WriteLine($"=== INFORMACIÓN DE USUARIO ===");
@@ -37,19 +52,40 @@
                 Console.WriteLine($"Direccion: {direccion}");
             }
 
+            /// <summary>
+            /// Muestra una notificación genérica para el usuario.
+            /// </summary>
             public virtual void notify()
             {
                 Console.WriteLine("Notificacion Usuario");
             }
+
+            /// <summary>
+            /// Devuelve el DNI del usuario.
+            /// </summary>
             public string getDni()
             {
                 return DNI;
             }
         }
+
+        /// <summary>
+        /// Clase Paciente que hereda de Usuario y representa a un paciente en el sistema de citas médicas.
+        /// </summary>
         public class Paciente : Usuario
         {
+
             public string SeguroSalud { get; set; }
 
+            /// <summary>
+            /// Constructor de la clase Paciente.
+            /// <param name="nombre">Nombre del paciente.</param>
+            /// <param name="dni">DNI del paciente.</param>
+            /// <param name="seguro">Tipo de seguro de salud del paciente.</param>
+            /// <param name="_telefono">Teléfono del paciente.</param>
+            /// <param name="_email">Correo electrónico del paciente.</param>
+            /// <param name="_direccion">Dirección del paciente.</param>
+            /// </summary>
             public Paciente(string nombre, string dni, string seguro, int _telefono, string _email, string _direccion)
                 : base(nombre, dni, _telefono, _email, _direccion)
             {
@@ -68,6 +104,10 @@
                 Console.WriteLine("Cita Medica sera el dia Martes 12 a las 3:00 pm con el Doctor Perez");
             }
         }
+
+        /// <summary>
+        /// Clase Doctor que hereda de Usuario y representa a un doctor en el sistema de citas médicas.
+        /// </summary> 
         public class Doctor : Usuario
         {
             public string Especialidad { get; set; }
@@ -97,6 +137,9 @@
             }
         }
 
+        /// <summary>
+        /// Clase Enfermero que hereda de Usuario y representa a un enfermero en el sistema de citas médicas.
+        /// </summary>
         public class Enfermero : Usuario
         {
             public string universidad { get; set; }
@@ -116,6 +159,12 @@
                 base.print();
                 Console.WriteLine($"Universidad: {universidad}");
             }
+            /// <summary>
+            /// Muestra el horario de asistencia del enfermero.
+            /// </summary>
+            /// <remarks>
+            /// Este método imprime el horario de asistencia del enfermero.
+            /// </remarks>
             public override void notify()
             {
                 Console.WriteLine("Horario de Asistencia");
@@ -131,6 +180,8 @@
             //Usuario patient2 = new Paciente("Manuel Lopez", "78963256", "EsSalud");
             //Usuario doctor1 = new Doctor("Luis Cabrera", "78965236", "Pediatria");
             //Usuario doctor2 = new Doctor("Elena Vargas", "78963256", "Cardiología");
+
+            #region RE:01 Menu Principal interactivo para el sistema de citas médicas
 
             List<Paciente> pacientes = new List<Paciente>();
             List<Doctor> doctores = new List<Doctor>();
@@ -268,6 +319,7 @@
                 Console.WriteLine("\nPress any key to continue...");
                 Console.ReadKey();
             }
+            #endregion
         }
     }
 }
